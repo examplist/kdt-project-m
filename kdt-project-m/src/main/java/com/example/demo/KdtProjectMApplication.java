@@ -8,6 +8,7 @@ public class KdtProjectMApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KdtProjectMApplication.class, args);
+		System.out.println("akm_pushtest");
 	}
 
 }
