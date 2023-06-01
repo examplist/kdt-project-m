@@ -3,15 +3,12 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-<!-- 
-<settings>
-<setting name="logImpl" value="LOG4J"/>
-</settings>
- -->
+	<!-- <settings> <setting name="logImpl" value="LOG4J"/> </settings> -->
 
-<!-- <typeAliases>
-	<typeAlias type="board.spring.mybatis.MemberDTO" alias="memberdto"/>
-	<typeAlias type="board.spring.mybatis.BoardDTO" alias="boarddto"/>
-</typeAliases> -->
+	<!-- <typeAliases> <typeAlias type="board.spring.mybatis.MemberDTO" alias="memberdto"/> 
+		<typeAlias type="board.spring.mybatis.BoardDTO" alias="boarddto"/> </typeAliases> -->
+	<typeAliases>
+		<typeAlias type="dto.ProductDTO" alias="productdto" />
+	</typeAliases>
 
 </configuration>

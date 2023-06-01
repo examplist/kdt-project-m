@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+footer {
+	padding: 2rem;
+	clear: both;
+}
+
+footer div {
+	margin: 1rem 0;
+	margin-top: 100;
+	text-align: center;
+}
