@@ -1,3 +1,4 @@
+<%@page import="dto.CategoryDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,22 +12,8 @@
 <link rel="stylesheet" href="/css/home/rank.css" />
 </head>
 <body>
-	<jsp:useBean id="categories" class="java.util.ArrayList" />
-	<jsp:useBean id="categoryIdToName" class="java.util.HashMap" />
-
-	<%
-	categories.add("top");
-	categories.add("bottom");
-	categories.add("cap");
-	categories.add("shoes");
-	categories.add("acc");
-
-	categoryIdToName.put("top", "상의");
-	categoryIdToName.put("bottom", "하의");
-	categoryIdToName.put("cap", "모자");
-	categoryIdToName.put("shoes", "신발");
-	categoryIdToName.put("acc", "액세서리");
-	%>
+	<c:set var="categories" value="${CategoryDTO.CATEGORIES }" />
+	<c:set var="categoryIdToName" value="${CategoryDTO.CATEGORY_TO_NAME }" />
 
 	<section class="home__rank">
 		<h1 class="section-title">카테고리별 판매량 순위</h1>
