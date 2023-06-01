@@ -9,6 +9,7 @@
 		<typeAlias type="board.spring.mybatis.BoardDTO" alias="boarddto"/> </typeAliases> -->
 	<typeAliases>
 		<typeAlias type="dto.ProductDTO" alias="productdto" />
+	    <typeAlias type="dto.MemberDTO" alias="memberdto"/>
 	</typeAliases>
 
 </configuration>
