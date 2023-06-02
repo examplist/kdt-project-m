@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ProductDAO">
+	<select id="highRanked" parameterType="hashmap" resultType="productdto">
+		SELECT * FROM mp_product WHERE category LIKE #{category} ORDER BY count DESC LIMIT #{limit};
+	</select>
+</mapper>
+
+
+
+
+
+

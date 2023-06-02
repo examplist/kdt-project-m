@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+header {
+	--height: 4rem;
+}
+
+header {
+	display: flex;
+	height: var(--height);
+	background-color: #ddd;
+	padding: 0.5rem;
+	position: relative;
+}
+
+header .narrow-category-button {
+	width: calc(var(--height) * 0.8);
+	height: var(--height);
+	display: none;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+header .narrow-category-button img {
+	width: calc(var(--height) * 0.4);
+	height: calc(var(--height) * 0.4);
+}
+
+header .narrow-category-container {
+	position: absolute;
+	top: calc(var(--height) + 1rem);
+	left: 1rem;
+	display: none;
+	z-index: 1;
+}
+
+header .narrow-category-container.show {
+	/* 화면이 커지면 사라지게 하기 위해서 */
+	display: none;
+}
+
+header .narrow-category-container div {
+	padding: 0.5rem;
+	background-color: white;
+}
+
+header .narrow-category-container div a {
+	text-decoration: none;
+	color: black;
+}
+
+header .logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1.5rem;
+	font-size: 1.5rem;
+}
+
+header .logo a {
+	text-decoration: none;
+	color: black;
+}
+
+header .category {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.5rem;
+	font-size: 1.2rem;
+}
+
+header .category a {
+	text-decoration: none;
+	color: black;
+}
+
+header .space {
+	flex-grow: 1;
+}
+
+header .icon-right {
+	width: calc(var(--height) * 0.8);
+	height: var(--height);
+}
+
+header .icon-right a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+
+header .icon-right a:hover {
+	color: red;
+}
+
+header .icon-right a img {
+	width: calc(var(--height) * 0.4);
+	height: calc(var(--height) * 0.4);
+}
+
+header .auth-button {
+	width: calc(var(--height) * 0.8);
+	height: var(--height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header .auth-button button {
+	width: calc(var(--height) * 0.5);
+	height: calc(var(--height) * 0.5);
+	background-color: transparent;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	border: 3px solid black;
+	border-radius: 50%;
+}
+
+header .auth-board {
+	position: absolute;
+	top: calc(var(--height) + 1rem);
+	right: 1rem;
+	display: none;
+	z-index: 1;
+}
+
+header .auth-board.show {
+	display: block;
+}
+
+header .auth-board div {
+	padding: 0.5rem;
+	background-color: white;
+}
+
+header .auth-board div a {
+	text-decoration: none;
+	color: black;
+}
+
+@media ( max-width : 650px) {
+	header .narrow-category-button {
+		display: flex;
+	}
+	header .narrow-category-container.show {
+		display: block;
+	}
+	header .category {
+		display: none;
+	}
+}

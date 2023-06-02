@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.home__slide {
+  width: 100%;
+  height: calc(100vw / 2);
+  min-height: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__slide .slide-container {
+  position: absolute;
+  width: calc(5 * 100%);
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+.home__slide .slide-container .slide {
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+.home__slide .slide-container .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.home__slide .slide-container .slide .content {
+  margin: 0 3rem;
+  width: 45%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.home__slide .slide-container .slide .content .title {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.home__slide .slide-container .slide .content .description {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home__slide .slide-container .slide .content .link {
+  width: 6rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.home__slide .slide-container .slide .content .link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 0.8rem;
+  background-color: black;
+  color: white;
+}
+
+.home__slide .btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__slide .btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.home__slide .btn-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.25rem;
+}
+
+.home__slide .btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.25rem;
+}
+
+@media (max-width: 550px) {
+  .home__slide .slide-container .slide .content .title {
+    font-size: 1.5rem;
+  }
+  .home__slide .slide-container .slide .content .description {
+    font-size: 1rem;
+  }
+  .home__slide .slide-container .slide .content .link {
+    font-size: 0.7rem;
+    width: 5rem;
+    height: 2rem;
+  }
+}

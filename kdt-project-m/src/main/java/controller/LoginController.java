@@ -17,17 +17,22 @@ public class LoginController {
 	MemberService service;
 
 	@GetMapping("login")
-	public String getSelectOne() {
+	public String getSelectOne(HttpSession session) {
+		session.setAttribute("failed", false);
 		return "member/login";
 	}
 
 	@PostMapping("login")
-	public String getSelectOne(MemberDTO dto, String memberid, String memberpw, HttpSession session) throws Exception {
+	public String getSelectOne(MemberDTO dto, String memberid, HttpSession session) throws Exception {
 		dto = service.getSelectOne(dto);
 		if (dto != null) {
 				session.setAttribute("sessionid", dto);
+				session.setAttribute("failed", false);
+				return "redirect:/";
+			}else {
+			session.setAttribute("failed", true);
+			return "member/login";
 		}
-		return "redirect:/";
 	}
 
 	@GetMapping("logout")

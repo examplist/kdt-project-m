@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+       h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #mypageinfo {
+            display: inline-block;
+            padding: 40px;
+            border: 2px solid #000000;
+            text-align: right;
+        }
+
+        #mypageinfo input {
+            padding: 10px;
+            margin: 20px;
+            width: 300px;
+        }
+
+        #mypageform {
+            text-align: center;
+            margin-top: 10px;
+        }
+  
