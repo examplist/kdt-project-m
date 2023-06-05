@@ -12,7 +12,7 @@ public class MemberDTO {
 		this.memberid = memberid;
 		this.memberpw = memberpw;
 	}
-	MemberDTO(){	
+	public MemberDTO(){	
 	}
 	
 	public MemberDTO(String memberid, String membername, String memberpw, String phone, String email, String regtime) {
