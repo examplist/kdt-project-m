@@ -13,7 +13,15 @@
 <title>KDT 쇼핑</title>
 </head>
 <body>
-
+<%
+boolean failed = (boolean) session.getAttribute("failed");
+%>
+<c:set var="jstlFailed" value="<%=failed%>" />
+<c:if test="${jstlFailed == true }">
+  <script>
+    alert("아이디 또는 비밀번호를 확인해주세요!");
+  </script>
+</c:if>
 	<h1>Login</h1>
 	<form name="login" action="login" method="post">
 		<input name="memberid" id="user_id" type="text" placeholder="ID를 입력하세요. (4자리 이상)" autofocus><br>

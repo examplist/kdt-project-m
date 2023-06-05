@@ -12,4 +12,8 @@ import dto.ProductDTO;
 @Repository
 public interface ProductDAO {
 	List<ProductDTO> highRanked(HashMap map);
+	
+	List<ProductDTO> categoryList(String category);
+	
+	ProductDTO productDetail(int id);
 }

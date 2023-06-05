@@ -5,6 +5,14 @@
 	<select id="highRanked" parameterType="hashmap" resultType="productdto">
 		SELECT * FROM mp_product WHERE category LIKE #{category} ORDER BY count DESC LIMIT #{limit};
 	</select>
+	
+	<select id="categoryList" parameterType="string" resultType="productdto">
+		select * from mp_product where category=#{category};
+	</select>
+	
+	<select id="productDetail" parameterType="int" resultType="productdto">
+		select * from mp_product where id=#{id};
+	</select>
 </mapper>
 
 

@@ -38,7 +38,7 @@
 									<div class="rank" style="background-color: white">4</div>
 								</c:when>
 							</c:choose>
-							<a href="${product.id }.html">
+							<a href='productDetail?id=${product.id }'>
 								<div class="image">
 									<img src="/img/product/${product.id }.jpg" />
 								</div>

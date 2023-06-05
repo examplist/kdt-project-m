@@ -43,7 +43,7 @@
 		</div>
 		<c:forEach items="${categories }" var="category">
 			<div class="category">
-				<a href="/category?type=${category }">${categoryIdToName[category] }</a>
+				<a href="/category?category=${category }">${categoryIdToName[category] }</a>
 			</div>
 		</c:forEach>
 		<div class="space"></div>

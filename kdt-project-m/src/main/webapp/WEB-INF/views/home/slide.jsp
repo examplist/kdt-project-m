@@ -19,7 +19,7 @@
 						<div class="title">${CategoryDTO.SLIDE_MESSAGE[category][0] }</div>
 						<div class="description">${CategoryDTO.SLIDE_MESSAGE[category][1] }</div>
 						<div class="link">
-							<a href="/category?type=${category }">바로가기</a>
+							<a href="/category?category=${category }">바로가기</a>
 						</div>
 					</div>
 					<img src="/img/slide/${category}.jpg" />
