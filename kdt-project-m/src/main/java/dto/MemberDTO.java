@@ -30,10 +30,10 @@ public class MemberDTO {
 	public void setMemberid(String memberid) {
 		this.memberid = memberid;
 	}
-	public String getName() {
+	public String getMembername() {
 		return membername;
 	}
-	public void setName(String membername) {
+	public void setMembername(String membername) {
 		this.membername = membername;
 	}
 	public String getMemberpw() {

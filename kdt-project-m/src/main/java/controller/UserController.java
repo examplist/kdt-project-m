@@ -24,7 +24,7 @@ public class UserController {
 		return new MemberDTO();
 	}
 	
-	@GetMapping("resisterUser.do")
+	@GetMapping("registerUser.do")
 	public String form() {
 		return "member/memberRegister";
 	}
