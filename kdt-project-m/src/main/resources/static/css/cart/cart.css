@@ -1,0 +1,49 @@
+
+
+/* section */
+section {
+	width: 100%;
+	padding: 80px 20%; /*다른 페이지들과 여백 통일 필요*/
+	box-sizing: border-box;
+}
+section > h2 {
+	margin-bottom: 32px;
+	font-size: 28px;
+}
+/* 장바구니 리스트 */
+.itemlist {
+	width: 100%;
+}
+/* 아이템 */
+.itemlist > li {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	padding: 24px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+.itemlist > li > .p_img {
+	width: 120px;
+	height: 120px;
+	/* border: 2px solid #ccc; */
+}
+.itemlist > li > .p_info {
+	display: flex;
+	flex-direction: column;
+}
+.itemlist > li > .p_info > .title {
+	font-weight: 800;
+	font-size: 24px;
+}
+.itemlist > li > .p_info > .price {
+	color: red;
+	font-weight: 700;
+	font-size: 24px;
+}
+/* 구매체크박스 */
+.itemlist > li > .chack {
+	width: 40px;
+	height: 40px;
+}
+
