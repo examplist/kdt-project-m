@@ -10,6 +10,8 @@
 	<typeAliases>
 		<typeAlias type="dto.ProductDTO" alias="productdto" />
 	    <typeAlias type="dto.MemberDTO" alias="memberdto"/>
+	    <typeAlias type="dto.BoardMemberDTO" alias="boardmemberdto"/>	    
+	    <typeAlias type="dto.BoardDTO" alias="boarddto"/>	    
 	</typeAliases>
 
 </configuration>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BoardDAO">
+	<resultMap id="memberMap" type="memberdto">
+		<id property="memberid" column="memberid" />
+		<result property="membername"  column="membername" />
+		<result property="memberpw"  column="memberpw" />
+		<result property="phone"  column="phone" />
+		<result property="email"  column="email" />
+		<result property="regtime"  column="regtime" />
+	</resultMap>
+	<resultMap id="boardMemberMap" type="boardmemberdto">
+		<id property="id" column="id" />
+		<result property="title"  column="title" />		
+		<result property="content"  column="content" />		
+		<result property="writedate"  column="writedate" />		
+		<result property="views"  column="views" />
+		<association property="writer" resultMap="memberMap" />		
+	</resultMap>
+	
+	<select id="articlesAll" resultMap="boardMemberMap" parameterType="int">
+		SELECT * FROM mp_board
+			JOIN mp_member ON mp_board.writer = mp_member.memberid
+			ORDER BY mp_board.writedate DESC
+			LIMIT #{startIndex}, 4;
+	</select>
+	<select id="countArticles" resultType="int">
+		SELECT count(*) FROM mp_board;
+	</select>
+	<select id="articlesMy" resultMap="boardMemberMap" parameterType="String">
+		SELECT * FROM mp_board
+			JOIN mp_member ON mp_board.writer = mp_member.memberid
+			WHERE mp_board.writer = #{memberid}
+			ORDER BY mp_board.writedate DESC;
+	</select>
+	<select id="articleContent" resultMap="boardMemberMap" parameterType="int">
+		SELECT * FROM mp_board
+			JOIN mp_member ON mp_board.writer = mp_member.memberid
+			WHERE mp_board.id = #{articleid};
+	</select>
+	<insert id="createArticle" parameterType="boarddto" >
+		INSERT INTO mp_board (writer, title, content, writedate, views) VALUES (#{writer}, #{title}, #{content}, now(), 0);
+	</insert>
+	<update id="updateArticle" parameterType="boarddto">
+		UPDATE mp_board SET title = #{title}, content = #{content} WHERE id = #{id};
+	</update>
+	<delete id="deleteArticle" parameterType="boarddto">
+		DELETE FROM mp_board WHERE id = #{id};
+	</delete>
+</mapper>

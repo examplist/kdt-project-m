@@ -48,7 +48,7 @@
 		</c:forEach>
 		<div class="space"></div>
 		<div class="icon-right">
-			<a href="/board"><img src="/img/icon/board.svg" /></a>
+			<a href="/board/all?page=1"><img src="/img/icon/board.svg" /></a>
 		</div>
 		<c:choose>
 			<c:when test="${fn:length(jstlMemName) > 0 }">
