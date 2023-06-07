@@ -5,8 +5,12 @@
 
 <mapper namespace="dao.MemberDAO">
 
-<select id="getSelectOne" resultType="memberdto" parameterType="MemberDTO">
-select * from mp_member where memberid = #{memberid} and memberpw = #{memberpw}
-</select>
-
+	<select id="getSelectOne" resultType="memberdto"
+		parameterType="MemberDTO">
+		select * from mp_member where memberid = #{memberid} and memberpw =
+		#{memberpw}
+	</select>
+	<update id="updateMember" parameterType="MemberDTO">
+		UPDATE mp_member SET memberid =#{memberid},membername=#{membername},memberpw=#{memberpw},phone=#{phone},email=#{email},regtime=now() WHERE (memberid = #{memberid});
+	</update>
 </mapper>

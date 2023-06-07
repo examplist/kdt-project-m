@@ -90,7 +90,7 @@ body {
 					<div class="buttons">
 						<input type="submit" name="확인" class="submit" />
 						<div class="cancel">
-							<a href="/board/all">취소</a>
+							<a href="/board/all?page=1">취소</a>
 						</div>
 					</div>
 				</form>

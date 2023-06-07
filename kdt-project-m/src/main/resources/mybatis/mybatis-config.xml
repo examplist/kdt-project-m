@@ -5,13 +5,12 @@
 
 	<!-- <settings> <setting name="logImpl" value="LOG4J"/> </settings> -->
 
-	<!-- <typeAliases> <typeAlias type="board.spring.mybatis.MemberDTO" alias="memberdto"/> 
-		<typeAlias type="board.spring.mybatis.BoardDTO" alias="boarddto"/> </typeAliases> -->
 	<typeAliases>
 		<typeAlias type="dto.ProductDTO" alias="productdto" />
-	    <typeAlias type="dto.MemberDTO" alias="memberdto"/>
-	    <typeAlias type="dto.BoardMemberDTO" alias="boardmemberdto"/>	    
-	    <typeAlias type="dto.BoardDTO" alias="boarddto"/>	    
+		<typeAlias type="dto.MemberDTO" alias="memberdto" />
+		<typeAlias type="dto.PurchaseDTO" alias="purchasedto" />
+		<typeAlias type="dto.BoardMemberDTO" alias="boardmemberdto" />
+		<typeAlias type="dto.BoardDTO" alias="boarddto" />
 	</typeAliases>
 
 </configuration>

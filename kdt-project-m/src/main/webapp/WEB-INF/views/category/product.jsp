@@ -8,6 +8,18 @@
 <link href="/css/category/styles.css" rel="stylesheet" />
 <title>Insert title here</title>
 <script src="/js/jquery-3.6.4.min.js"></script>
+ <script>
+$(document).ready(function(){
+	$("purchase").on('click',function(e){
+		let sessionid = <%=session.getAttribute("sessionid")%>;
+		if(sessionid ==null){
+			alert("로그인 먼저 하셔야 합니다.");
+			e.preventDefault();
+		}//if
+	});//on
+});//ready
+
+</script> 
 
 </head>
 <body>
@@ -18,16 +30,19 @@
         <div>
         </div>
         <h1></h1>
-          <form>
+          <form action="purchaseok">
             <h1> </h1>
-            <h3>상품명:   ${productDetail.title }</h3>
+            <h3>상품명:   ${productDetail.title}</h3>
             <h3>가격:   ${productDetail.price }원</h3>
             <h3>수량</h3>
             <input type=text name=amount value=0>
          	
             <input type=button value="증가" onClick="javascript:this.form.amount.value++;">
             <input type=button value="감소" onClick="javascript:this.form.amount.value--;"><hr>
-            <button id="purchase">구매하기</button><button id="cart">장바구니 담기</button>
+             <a href='purchaseok'><input type=button id="purchase" value="구매하기"></a><!-- </a> -->
+           <%-- ?product=${productDetail.title } --%>
+           
+            <a href='gocart'><input type=button id="cart" value="장바구니 담기"></a>
             </form>
         
         </div>

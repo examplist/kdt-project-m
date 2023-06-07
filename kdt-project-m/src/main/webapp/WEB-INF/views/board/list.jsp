@@ -107,7 +107,7 @@ body {
 				</c:when>
 				<c:otherwise>
 					<div>
-						<a href="/board/all">모두가 쓴 글로 이동</a>
+						<a href="/board/all?page=1">모두가 쓴 글로 이동</a>
 					</div>
 				</c:otherwise>
 			</c:choose>

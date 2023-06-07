@@ -14,4 +14,7 @@ public class MemberService {
 	public MemberDTO getSelectOne(MemberDTO dto) throws Exception {
 		return dao.getSelectOne(dto);
 	}
+	public void updateMember(MemberDTO dto) {
+	
+	}
 }

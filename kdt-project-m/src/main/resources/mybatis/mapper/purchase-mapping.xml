@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.PurchaseDAO">
+	
+	<insert id="purchaseCreate" parameterType="purchasedto">
+		insert into mp_buy(id, buyer, product, count)
+		values(#{id},#{buyer},#{product},#{count})
+	</insert>
+	<select id="purchaseList" parameterType="string" resultType="purchasedto">
+	select * from mp_buy where buyer=#{buyer};
+	</select>
+<!--<resultMap type="dto.ProductDTO" id="productMap">
+		<id property="id" column="id"/>
+		<result property="title" column="title"/>
+		<result property="price" column="price"/>
+		<result property="des" column="des"/>
+		<result property="count" column="count"/>
+		<association property="member" resultMap="purchaseMap"/>
+	</resultMap>
+	
+	<resultMap type="dto.CartDTO" id="purchaseMap">
+		<id property="id" column="id"/>
+		<result property="buyer" column="buyer"/>
+		<result property="product" column="product"/>
+		<result property="count" column="count"/>
+		
+	</resultMap>
+	
+<select id="cartList" parameterType="int"  resultMap="boardwritermap">
+select seq, title, contents, memberid, name, email, phone, regtime, b.pw as b_pw, m.pw as m_pw
+from board b inner join c_member m
+on writer = memberid
+where seq=#{seq}
+</select>-->
+</mapper>
+
+
+
+
+
+

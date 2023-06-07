@@ -29,7 +29,7 @@ boolean failed = (boolean) session.getAttribute("failed");
 		 <input id="loginbtn" type="submit" value="로그인">
 	</form>
 	<div>
-		<input type="button" value="회원가입" onclick="location.href='form.html'">
+		<input type="button" value="회원가입" onclick="location.href='registerUser.do'">
 	</div>
 
 <%@ include file="../footer.jsp"%>

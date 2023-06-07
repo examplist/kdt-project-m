@@ -62,6 +62,9 @@
 					<div>
 						<a href="/mypage">마이페이지</a>
 					</div>
+					<div>
+						<a href="/purchaseList">구매내역</a>
+					</div>
 				</div>
 			</c:when>
 			<c:otherwise>
@@ -71,7 +74,7 @@
 			</c:otherwise>
 		</c:choose>
 		<div class="icon-right">
-			<a href="/cart"><img src="/img/icon/cart.svg" /></a>
+			<a href="/gocart"><img src="/img/icon/cart.svg" /></a>
 		</div>
 	</header>
 </body>

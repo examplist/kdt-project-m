@@ -11,6 +11,8 @@ import dto.MemberDTO;
 public interface MemberDAO {
 	
 	public MemberDTO getSelectOne(MemberDTO dto) throws Exception;
+	public int userModify(MemberDTO dto) throws Exception;
+	public void updateMember(MemberDTO dto);
 
 }
 
